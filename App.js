@@ -3,6 +3,14 @@ import Routes from './src/routes'
 import { AppLoading } from 'expo'
 import * as Font from 'expo-font'
 import { Ionicons } from '@expo/vector-icons'
+import * as Notifications from 'expo-notifications';
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: false,
+    shouldSetBadge: false,
+  }),
+});
 export default function App() {
   const [isReady, setIsReady] = useState(false)
   async function getFonts() {
