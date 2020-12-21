@@ -76,16 +76,10 @@ export default function home () {
             <View style={{flexDirection: 'row', width: 300, justifyContent: 'space-around', marginTop: 5}}>
               <Text>{formatarData(limpeza.dataProximaLimpeza)}</Text>
               <Text>{limpeza.frequencia}</Text>
-              <TouchableOpacity onPress={() => excluir(limpeza.id)}>
-                <FontAwesome5 name="trash-alt" size={18} color="black" />
-              </TouchableOpacity>
             </View>
           )}
         />}
        </View>
-      </View>
-      <View style={{alignItems: 'center'}}>
-        <Button label={'Registrar Nova Limpeza'} click={navigateToNovaLimpeza} style={{width: 300}}/>
       </View>
     </View>
   )
